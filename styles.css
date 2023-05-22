@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Dark-gray: hsl(0, 0%, 59%);
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+}
+
+body {
+  font-size: 62.5%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  background-color: var(--Dark-cyan);
+
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-pattern {
+  position: absolute;
+  top: -33rem;
+  left: -20rem;
+  transform: rotate(20deg);
+}
+
+.bottom-pattern {
+  position: absolute;
+  bottom: 0;
+  right: -20rem;
+  top: 20rem;
+  transform: rotate(-10deg);
+}
+
+.main-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  height: 30rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.bg-pattern {
+  position: absolute;
+  width: 100%;
+}
+
+.img-victor {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+}
+
+.name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-family: Kumbh Sans;
+  font-weight: 700;
+}
+
+.place {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  color: var(--Dark-grayish-blue);
+
+  font-family: Kumbh Sans;
+}
+
+.age {
+  font-size: 1.5rem;
+  color: var(--Dark-grayish-blue);
+}
+
+.media-platforms {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 5rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.media-name {
+  display: inline-block;
+}
+
+.media-name:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+.media-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: Kumbh Sans;
+}
+
+.tag {
+  font-size: 1rem;
+  color: var(--Dark-grayish-blue);
+}
+
+@media (max-width: 375px) {
+  .main-content {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .name,
+  .age {
+    font-size: 1rem;
+  }
+
+  .media-platforms {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 3rem;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .media-count {
+    font-size: 1rem;
+  }
+
+  .top-pattern {
+    top: -45rem;
+    transform: rotate(30deg);
+    left: -40rem;
+  }
+
+  .bottom-pattern {
+    top: 18rem;
+    right: -42rem;
+    transform: rotate(-10deg);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    overflow: hidden;
+  }
+
+  .top-pattern,
+  .bottom-pattern {
+    position: fixed;
+  }
+}
